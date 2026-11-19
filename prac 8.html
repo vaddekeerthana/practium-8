@@ -1,0 +1,479 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>METAVERSE - Virtual World Experience</title>
+
+<style>
+
+/* GENERAL STYLING */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f2f0ff;
+    color: #25245a;
+    line-height: 1.6;
+}
+
+/* HEADER */
+
+header {
+    background-color: white;
+    padding: 15px 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+header img {
+    width: 180px;
+    max-width: 100%;
+    height: auto;
+}
+
+/* NAVIGATION */
+
+nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #25245a;
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: #8065ff;
+}
+
+/* HERO SECTION */
+
+.hero {
+    text-align: center;
+    padding: 60px 20px;
+    background: linear-gradient(120deg, #5145cd, #9b59b6);
+    color: white;
+}
+
+.hero h1 {
+    font-size: 40px;
+    margin-bottom: 10px;
+}
+
+.hero p {
+    font-size: 20px;
+}
+
+/* ABOUT SECTION */
+
+.about {
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.about h2 {
+    color: #5145cd;
+    margin-bottom: 15px;
+}
+
+.about p {
+    max-width: 850px;
+    margin: auto;
+}
+
+/* GALLERY SECTION */
+
+.gallery {
+    padding: 40px 5%;
+}
+
+.gallery h2 {
+    text-align: center;
+    color: #5145cd;
+    margin-bottom: 30px;
+}
+
+/* GALLERY GRID */
+
+.gallery-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+/* CARDS */
+
+.card {
+    background-color: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 3px 10px #cccccc;
+}
+
+.card img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    display: block;
+}
+
+.card h3 {
+    color: #5145cd;
+    padding: 12px 15px 5px;
+}
+
+.card p {
+    padding: 5px 15px 20px;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* BENEFITS SECTION */
+
+.benefits {
+    background-color: #e9e4ff;
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.benefits h2 {
+    color: #5145cd;
+    margin-bottom: 15px;
+}
+
+.benefits ul {
+    list-style: none;
+    line-height: 2;
+}
+
+/* FOOTER */
+
+footer {
+    background-color: #25245a;
+    color: white;
+    text-align: center;
+    padding: 25px;
+}
+
+/* DESKTOP RESPONSIVE DESIGN */
+
+@media screen and (min-width: 1025px) {
+
+    .gallery-container {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .card img {
+        height: 250px;
+    }
+
+    .hero h1 {
+        font-size: 45px;
+    }
+}
+
+/* TABLET RESPONSIVE DESIGN */
+
+@media screen and (min-width: 481px) and (max-width: 1024px) {
+
+    .gallery-container {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 18px;
+    }
+
+    header {
+        justify-content: center;
+        gap: 15px;
+    }
+
+    nav {
+        justify-content: center;
+    }
+
+    .hero h1 {
+        font-size: 32px;
+    }
+
+    .card img {
+        height: 200px;
+    }
+
+    .gallery {
+        padding: 30px 4%;
+    }
+}
+
+/* MOBILE RESPONSIVE DESIGN */
+
+@media screen and (max-width: 480px) {
+
+    .gallery-container {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    header {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    header img {
+        width: 140px;
+    }
+
+    nav {
+        justify-content: center;
+        gap: 12px;
+    }
+
+    nav a {
+        font-size: 14px;
+    }
+
+    .hero {
+        padding: 35px 15px;
+    }
+
+    .hero h1 {
+        font-size: 26px;
+    }
+
+    .hero p {
+        font-size: 16px;
+    }
+
+    .gallery {
+        padding: 25px 15px;
+    }
+
+    .card img {
+        width: 100%;
+        height: auto;
+        aspect-ratio: 16 / 9;
+        object-fit: cover;
+    }
+
+    .about {
+        padding: 25px 15px;
+    }
+
+    .benefits {
+        padding: 30px 15px;
+    }
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- HEADER -->
+
+<header>
+
+    <img src="metaverse logo.png"
+         alt="Metaverse Logo">
+
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#gallery">Applications</a>
+        <a href="#benefits">Benefits</a>
+    </nav>
+
+</header>
+
+
+<!-- HERO SECTION -->
+
+<section class="hero" id="home">
+
+    <h1>METAVERSE</h1>
+
+    <p>Virtual World Experience</p>
+
+    <p>Explore Beyond Reality, Experience the Future!</p>
+
+</section>
+
+
+<!-- ABOUT SECTION -->
+
+<section class="about" id="about">
+
+    <h2>About Metaverse</h2>
+
+    <p>
+        Metaverse is a digital virtual environment that
+        connects people through advanced technologies
+        such as Virtual Reality (VR), Augmented Reality (AR)
+        and Artificial Intelligence. It allows users to
+        interact, communicate, explore virtual spaces,
+        attend events and experience digital activities
+        in an immersive three-dimensional world.
+    </p>
+
+</section>
+
+
+<!-- APPLICATIONS GALLERY -->
+
+<section class="gallery" id="gallery">
+
+    <h2>Our Metaverse Applications</h2>
+
+    <div class="gallery-container">
+
+        <div class="card">
+
+            <img src="vitrual rality.jpeg"
+                 alt="Virtual Reality">
+
+            <h3>Virtual Reality</h3>
+
+            <p>
+                Experience immersive digital environments
+                using virtual reality technology.
+            </p>
+
+        </div>
+
+
+        <div class="card">
+
+            <img src="vitrual gaming.jpeg"
+                 alt="Virtual Gaming">
+
+            <h3>Virtual Gaming</h3>
+
+            <p>
+                Explore interactive virtual games and
+                enjoy realistic digital experiences.
+            </p>
+
+        </div>
+
+
+        <div class="card">
+
+            <img src="vitrual education.jpeg"
+                 alt="Virtual Education">
+
+            <h3>Virtual Education</h3>
+
+            <p>
+                Learn through interactive virtual classrooms
+                and digital learning environments.
+            </p>
+
+        </div>
+
+
+        <div class="card">
+
+            <img src="vitrual events.jpeg"
+                 alt="Virtual Events">
+
+            <h3>Virtual Events</h3>
+
+            <p>
+                Attend online meetings, concerts,
+                conferences and virtual exhibitions.
+            </p>
+
+        </div>
+
+
+        <div class="card">
+
+            <img src="digitial ent.jpeg"
+                 alt="Digital Entertainment">
+
+            <h3>Digital Entertainment</h3>
+
+            <p>
+                Enjoy interactive entertainment and
+                exciting digital experiences.
+            </p>
+
+        </div>
+
+
+        <div class="card">
+
+            <img src="vitrual colla.jpeg"
+                 alt="Digital World">
+
+            <h3>Virtual Collaboration</h3>
+
+            <p>
+                Connect with people around the world
+                and collaborate in shared virtual spaces.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- BENEFITS SECTION -->
+
+<section class="benefits" id="benefits">
+
+    <h2>Benefits of Metaverse</h2>
+
+    <ul>
+
+        <li>✔ Provides Immersive Virtual Experiences</li>
+
+        <li>✔ Supports Online Education and Learning</li>
+
+        <li>✔ Improves Digital Communication</li>
+
+        <li>✔ Encourages Virtual Collaboration</li>
+
+        <li>✔ Creates New Gaming Opportunities</li>
+
+        <li>✔ Supports Virtual Meetings and Events</li>
+
+        <li>✔ Connects People Across the World</li>
+
+    </ul>
+
+</section>
+
+
+<!-- FOOTER -->
+
+<footer>
+
+    <h3>METAVERSE</h3>
+
+    <p>Virtual World Experience</p>
+
+    <p>© 2026 Metaverse. All Rights Reserved.</p>
+
+    <p>Explore Beyond Reality 🌐</p>
+
+</footer>
+
+</body>
+</html>
